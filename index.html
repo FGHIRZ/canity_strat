@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="overlay" class="overlay">
+  <button onclick="off()" class="quitbutton">X</button>
+  <div class="video" id="video_div">
+    <video id="video_player" width="1280" height="720" controls>
+  </div>
+</video>
+</div>
+<div class="split inferno">
+  <div class="centered">
+    <h2>Inferno</h2>
+  </div>
+  <div class="book">
+  <h2>Strat Book</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"><a href="#">Pistol</a></li>
+            <li class="nav_button"><a href="#">2-1-2</a></li>
+            <li class="nav_button"> <a href="#">3-2 A</a> </li>
+            <li class="nav_button"> <a href="#">Rush B</a> </li>
+            <li class="nav_button" > <a href="#">Rush A</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"><button class="button" onclick="video_on('timing.mp4')">Pistol</button></li>
+            <li class="nav_button"><a href="#">2-1-2</a></li>
+            <li class="nav_button"> <a href="#">Prise Banane</a> </li>
+            <li class="nav_button"> <a href="#">3-2 Apps</a></li>
+            <li class="nav_button" > <a href="#">3-2 B</a> </li>
+            <li class="nav_button"><a href="#">Info Reprise</a></li>
+            <li class="nav_button" > <a href="#">Aggro Mid</a> </li>
+            <li class="nav_button" > <a href="#">Aggro M2</a> </li>
+         </ul>
+      </div>
+  </div>
+  <div class="brique">
+  <h2>Briques Stratégiques</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Prise banane</a></li>
+            <li class="nav_button"> <a href="#">Prise car</a></li>
+            <li class="nav_button"> <a href="#">Prise apps</a></li>
+            <li class="nav_button"> <a href="#">Prise T</a></li>
+            <li class="nav_button"> <a href="#">Finish Apps</a></li>
+            <li class="nav_button"> <a href="#">Finish Short</a></li>
+            <li class="nav_button"> <a href="#">Finish B</a></li>
+            <li class="nav_button"> <a href="#">Rush B</a></li>
+            <li class="nav_button"> <a href="#">Rush Longue</a></li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Prise Bannane 1</a></li>
+            <li class="nav_button"> <a href="#">Prise Bannane 2</a></li>
+            <li class="nav_button"> <a href="#">Défense car</a></li>
+            <li class="nav_button"> <a href="#">Défense B à 2</a></li>
+            <li class="nav_button"> <a href="#">Défense B à 3</a></li>
+            <li class="nav_button"> <a href="#">Reprise car</a></li>
+            <li class="nav_button"> <a href="#">Info car</a></li>
+            <li class="nav_button"> <a href="#">Défense BP A</a></li>
+            <li class="nav_button"> <a href="#">Reprise T</a></li>
+            <li class="nav_button"> <a href="#">Aggro M2</a></li>
+            <li class="nav_button"> <a href="#">Aggro mid</a></li>
+            <li class="nav_button"> <a href="#">Défense T</a></li>
+         </ul>
+      </div>
+  </div>
+  <div class="stuff">
+    <h2><a href="https://www.google.fr"> Stuff map</a></h2>
+  </div>
+</div>
+
+<div class="split overpass">
+  <div class="centered">
+    <h1>Overpass</h1>
+  </div>
+  <div class="book">
+  <h2>Strat Book</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Pistol</a> </li>
+            <li class="nav_button"> <a href="#">Controle A</a> </li>
+            <li class="nav_button"> <a href="#">Controle Constru-con</a> </li>
+            <li class="nav_button" > <a href="#">Antirush Monster</a> </li>
+            <li class="nav_button" > <a href="#">Rush Constru</a> </li>
+            <li class="nav_button" > <a href="#">Rush longue A</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+          <li class="nav_button"> <a href="#">Pistol</a> </li>
+          <li class="nav_button"> <a href="#">2-1-2</a> </li>
+          <li class="nav_button"> <a href="#">Prise Constru/Con</a> </li>
+          <li class="nav_button" > <a href="#">Prise Fontaine</a> </li>
+         </ul>
+      </div>
+  </div>
+  <div class="brique">
+  <h2>Briques Stratégiques</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Prise Fontaine</a> </li>
+            <li class="nav_button"> <a href="#">Prise Toilettes/Banane</a> </li>
+            <li class="nav_button"> <a href="#">Finish A</a> </li>
+            <li class="nav_button"> <a href="#">Finish Longue</a> </li>
+            <li class="nav_button"> <a href="#">Prise Connect</a> </li>
+            <li class="nav_button"> <a href="#">Finish B</a> </li>
+            <li class="nav_button"> <a href="#">Prise Monster</a> </li>
+            <li class="nav_button"> <a href="#">Prise B(monster)</a> </li>
+            <li class="nav_button"> <a href="#">Rush Constru</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Prise Constru</a></li>
+            <li class="nav_button"> <a href="#">Défense connect</a></li>
+            <li class="nav_button" > <a href="#">Prise fontaine 1</a></li>
+            <li class="nav_button" > <a href="#">Prise fontaine 2</a></li>
+            <li class="nav_button" > <a href="#">Monster 1</a></li>
+            <li class="nav_button" > <a href="#">Monster 2</a></li>
+            <li class="nav_button" > <a href="#">Antirush B</a></li>
+            <li class="nav_button" > <a href="#">Défense BP B</a></li>
+            <li class="nav_button" > <a href="#">Défense BP A</a></li>
+            <li class="nav_button" > <a href="#">Reprise Banane</a></li>
+            <li class="nav_button" > <a href="#">Reprise Constru</a></li>
+         </ul>
+      </div>
+  </div>
+  <div class="stuff">
+    <h2><a href="https://www.google.fr"> Stuff map</a></h2>
+  </div>
+</div>
+
+<div class="split Dust2">
+  <div class="centered">
+    <h2>Dust2</h2>
+  </div>
+  <div class="book">
+  <h2>Strat Book</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Pistol</a> </li>
+            <li class="nav_button"> <a href="#">Pack Lower</a> </li>
+            <li class="nav_button"> <a href="#">Controle Mid</a> </li>
+            <li class="nav_button" > <a href="#">Controle Short</a> </li>
+            <li class="nav_button" > <a href="#">Rush short</a> </li>
+            <li class="nav_button" > <a href="#">Contrôle GA</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+          <li class="nav_button"> <a href="#">Pistol</a> </li>
+          <li class="nav_button"> <a href="#">2-1-2</a> </li>
+          <li class="nav_button"> <a href="#">Prise short</a> </li>
+          <li class="nav_button" > <a href="#">Prise GA</a> </li>
+         </ul>
+      </div>
+  </div>
+  <div class="brique">
+  <h2>Briques Stratégiques</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Prise short</a> </li>
+            <li class="nav_button"> <a href="#">Prise Mid</a> </li>
+            <li class="nav_button"> <a href="#">Prise GA</a> </li>
+            <li class="nav_button"> <a href="#">Finish short</a> </li>
+            <li class="nav_button"> <a href="#">Finish GA</a> </li>
+            <li class="nav_button"> <a href="#">Rush Short</a> </li>
+            <li class="nav_button"> <a href="#">Pack Lower</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Défense B</a></li>
+            <li class="nav_button"> <a href="#">Défense GA</a></li>
+            <li class="nav_button"> <a href="#">Antirush B</a></li>
+            <li class="nav_button"> <a href="#">Prise GA</a></li>
+            <li class="nav_button" > <a href="#">Défense short</a></li>
+            <li class="nav_button" > <a href="#">Prise top Mid</a></li>
+            <li class="nav_button" > <a href="#">Reprise Short</a></li>
+            <li class="nav_button" > <a href="#">Reprise Mid</a></li>
+         </ul>
+      </div>
+  </div>
+  <div class="stuff">
+    <h2><a href="https://www.google.fr"> Stuff map</a></h2>
+  </div>
+</div>
+
+<div class="split Nuke">
+  <div class="centered">
+    <h2>Nuke</h2>
+  </div>
+  <div class="book">
+  <h2>Strat Book</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Pistol</a> </li>
+            <li class="nav_button"> <a href="#">Tempo inté</a> </li>
+            <li class="nav_button"> <a href="#">Prise exté</a> </li>
+            <li class="nav_button" > <a href="#">Entry exté</a> </li>
+            <li class="nav_button" > <a href="#">Rush inté</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+          <li class="nav_button"> <a href="#">Pistol</a> </li>
+          <li class="nav_button"> <a href="#">Défense inté</a> </li>
+          <li class="nav_button"> <a href="#">Info secret</a> </li>
+          <li class="nav_button" > <a href="#">Défense Rampe</a> </li>
+          <li class="nav_button" > <a href="#">Aggro exté</a> </li>
+         </ul>
+      </div>
+  </div>
+  <div class="brique">
+  <h2>Briques Stratégiques</h2>
+      <div class="left-column">
+        <h3> T side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Dézone C2/B1</a> </li>
+            <li class="nav_button"> <a href="#">Tempo inté</a> </li>
+            <li class="nav_button"> <a href="#">Prise rampe</a> </li>
+            <li class="nav_button"> <a href="#">Prise secret</a> </li>
+            <li class="nav_button"> <a href="#">Finish A</a> </li>
+            <li class="nav_button"> <a href="#">Finish B par labo</a> </li>
+            <li class="nav_button"> <a href="#">Rush porte</a> </li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <h3> CT side </h3>
+        <ul id="nav_bar">
+            <li class="nav_button"> <a href="#">Défense rampe</a></li>
+            <li class="nav_button"> <a href="#">Antirush inté</a></li>
+            <li class="nav_button" > <a href="#">Antirush inté</a></li>
+            <li class="nav_button" > <a href="#">Aggro exté</a></li>
+         </ul>
+      </div>
+  </div>
+  <div class="stuff">
+    <h2><a href="https://www.google.fr"> Stuff map</a></h2>
+  </div>
+</div>
+
+</body>
+<script>
+
+function video_on(src) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("video_div").style.display = "block";
+
+  var video = document.getElementById('video_player');
+  var source = document.createElement('source');
+
+  source.setAttribute('src', 'videos/'+src);
+
+  video.appendChild(source);
+}
+
+function image_on() {
+
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("image_div").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("video_div").style.display = "none";
+  document.getElementById("image_div").style.display = "none";
+}
+
+</script>
+</html>

@@ -1,0 +1,14 @@
+.radar {
+  display: block;
+ margin: auto;
+ height:50%;
+ background-image: url('img/inferno_radar.png');
+}
+
+.background {
+ background-color: #262626;
+}
+
+
+
+

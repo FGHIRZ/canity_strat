@@ -1,0 +1,212 @@
+body {
+  font-family: Arial;
+  color: white;
+  height: 100%;
+}
+html{
+  height: 100%;
+}
+
+.left-column{
+padding-top: 20px;
+position: absolute;
+left:25%;
+transform: translate(-50%, 0);
+
+}
+
+ul{
+padding: 0;
+list-style-type: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.right-column{
+padding-top: 20px;
+position: absolute;
+left: 75%;
+transform: translate(-50%, 0);
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.video{
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.quitbutton{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+    top:10px;
+  right: 10px;
+  position: absolute;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.split {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.inferno {
+  left: 0;
+  background-color: #222222;
+  background-image: url(../img/inferno.png);
+  border-style: solid;
+  border-color: white;
+}
+
+.overpass{
+  left: 25%;
+  background-color: red;
+  background-image: url(../img/overpass.png);
+  border-style: solid;
+  border-color: #FFFFFF;
+}
+
+.Dust2{
+  left: 50%;
+  background-color: #222222;
+  background-image: url(../img/dust2.png);
+  border-style: solid;
+  border-color: #FFFFFF;
+}
+
+
+.Nuke {
+  left: 75%;
+  background-color: red;
+  background-image: url(../img/nuke.png);
+  border-style: solid;
+  border-color: #FFFFFF;
+} 
+
+.book {
+  top: 15%;
+  position: absolute;
+  text-align: left;
+  padding-left: 0px;
+  margin: 0;
+  width: 100%;
+}
+
+.brique {
+  top: 45%;
+  position: absolute;
+  text-align: left;
+  padding-left: 0px;
+  margin: 0;
+  width: 100%;
+}
+
+.stuff {
+  top: 80%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  padding-left: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+}
+
+.book h2{
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  padding-left: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+}
+
+.brique h2{
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  padding-left: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 100%;
+}
+
+
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
