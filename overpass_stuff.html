@@ -72,7 +72,7 @@ function video_on(src) {
   var video = document.getElementById('video_player');
   var source = document.createElement('source');
 
-  source.setAttribute('src', 'videos/inferno/'+src + '.mp4');
+  source.setAttribute('src', 'videos/overpass/'+src + '.mp4');
   source.id="source"
 
   video.appendChild(source);
@@ -90,7 +90,7 @@ function Draw(){
         ctx.fill();
       }
     };
-    img.src = 'img/inferno_radar.png';
+    img.src = 'img/overpass_radar.png';
     canvas.addEventListener("mousemove", mouse, false);
     canvas.addEventListener("click", click, false);
 }
