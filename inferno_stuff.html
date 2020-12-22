@@ -19,8 +19,8 @@
 <script>
 var canvas = document.getElementById('canvas')
 var ctx = canvas.getContext('2d');
-var smoke_points = [{x:620, y:237}, {x:523, y:127}, {x:644, y:237}];
-var smoke_src = ['smoke_ct.mp4', 'smoke_ruine.mp4' , 'smoke_ct_2.mp4'];
+var smoke_points = [{x:620, y:237}, {x:523, y:127}, {x:644, y:237}, {x:474, y:447}, {x:452, y:553}, {x:452, y:584}, {x:487, y:407}];
+var smoke_src = ['smoke_ct', 'smoke_ruine' , 'smoke_ct_2', 'smoke_wood', 'smoke_banane', 'smoke_banane_2', 'smoke_muret'];
 
 function click(e)
 {
@@ -72,7 +72,8 @@ function video_on(src) {
   var video = document.getElementById('video_player');
   var source = document.createElement('source');
 
-  source.setAttribute('src', 'videos/'+src);
+  source.setAttribute('src', 'videos/'+src + '.mp4');
+  source.id="source"
 
   video.appendChild(source);
 }
@@ -85,7 +86,7 @@ function Draw(){
       for (i = 0; i < smoke_points.length; i++) {
         ctx.beginPath();
         ctx.arc(smoke_points[i].x,smoke_points[i].y,10,0,2*Math.PI);
-        ctx.fillStyle = "#43baba"; //red
+        ctx.fillStyle = "#2cbff5"; //red
         ctx.fill();
       }
     };
@@ -96,6 +97,11 @@ function Draw(){
 
 function off() {
   document.getElementById("overlay").style.display = "none";
+  document.getElementById("source").remove();
+  var video = document.getElementById('video_player');
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
 }
 
 Draw()
