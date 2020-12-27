@@ -1,8 +1,8 @@
 body {
   font-family: Arial;
-  color: white;
+  color: #8c939f;
   height: 100%;
-  background-color: #080808;
+  background-color: #282c34;
 }
 
 .main{
@@ -12,6 +12,14 @@ left: 10%;
 width:80%;
 text-align: center;
 
+}
+
+h1{
+  color:  #ffda73;
+}
+
+h2{
+ color: #ffda73;
 }
 
 html{
