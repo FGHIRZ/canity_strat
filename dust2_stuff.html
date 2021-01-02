@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Outil</title>
+  <link rel="stylesheet" href="css/radar.css">
+</head>
+<body style="background-color: #262626;">
+  <div id="overlay" class="overlay">
+    <button onclick="off()" class="quitbutton">X</button>
+    <div class="video" id="video_div">
+      <video id="video_player" width="1280" height="720" controls>
+    </div>
+  </video>
+  </div>
+  <div>
+  <canvas id='canvas' width="1024" height="1024" class="radar"></canvas>
+  </div>
+<script>
+var canvas = document.getElementById('canvas')
+var ctx = canvas.getContext('2d');
+var smoke_points = [{x:620, y:237}, {x:523, y:127}, {x:644, y:237}, {x:474, y:447}, {x:452, y:553}, {x:452, y:584}, {x:487, y:407}, {x:719, y:592}, {x:894, y:596}, {x:889, y:747}];
+var smoke_src = ['smoke_ct', 'smoke_ruine' , 'smoke_ct_2', 'smoke_wood', 'smoke_banane', 'smoke_banane_2', 'smoke_muret', 'smoke_longue', 'smoke_plaine', 'smoke_shox'];
+var molo_points = [{x:441, y:152}, {x:433, y:253}, {x:493, y:432}, {x:598, y:388}, {x:586, y:332}, {x:753, y:799}, {x:677, y:754}, {x:458, y:517}]
+var molo_src = ['molo_c4', 'molo_c3', 'molo_muret', 'molo_sandbags', 'molo_fallen', 'molo_short', 'molo_boiler', 'molo_banane']
+var combo_points = [{x:713, y:710}]
+var combo_src = ['combo_1']
+function click(e)
+{
+  var rect = canvas.getBoundingClientRect();
+  x=e.clientX-rect.left;
+  y=e.clientY-rect.top;
+  console.log(x,y)
+  var smoke_point= false;
+  var molo_point= false;
+  var combo_point= false;
+  var selected_point=0;
+  for(i=0; i<smoke_points.length; i++){
+    if(x<smoke_points[i].x+10 && x>smoke_points[i].x-10 && y>smoke_points[i].y-10 && y<smoke_points[i].y+10)
+    {
+      smoke_point=true
+      selected_point=i;
+      console.log(i)
+    }
+  }
+  for(i=0; i<molo_points.length; i++){
+    if(x<molo_points[i].x+10 && x>molo_points[i].x-10 && y>molo_points[i].y-10 && y<molo_points[i].y+10)
+    {
+      molo_point=true
+      selected_point=i;
+      console.log(i)
+    }
+  }
+  for(i=0; i<combo_points.length; i++){
+    if(x<combo_points[i].x+10 && x>combo_points[i].x-10 && y>combo_points[i].y-10 && y<combo_points[i].y+10)
+    {
+      combo_point=true
+      selected_point=i;
+      console.log(i)
+    }
+  }
+  if(smoke_point){
+      video_on(smoke_src[selected_point])
+      console.log(smoke_src[selected_point])
+  }
+  if(molo_point){
+      video_on(molo_src[selected_point])
+      console.log(molo_src[selected_point])
+  }
+  if(combo_point){
+      video_on(combo_src[selected_point])
+      console.log(combo_src[selected_point])
+  }
+
+}
+function mouse(e)
+{
+  var rect = canvas.getBoundingClientRect();
+  x=e.clientX-rect.left;
+  y=e.clientY-rect.top;
+  var point= false;
+  for(i=0; i<smoke_points.length; i++){
+    if(x<smoke_points[i].x+10 && x>smoke_points[i].x-10 && y>smoke_points[i].y-10 && y<smoke_points[i].y+10)
+    {
+      point=true
+    }
+  }
+  for(i=0; i<molo_points.length; i++){
+    if(x<molo_points[i].x+10 && x>molo_points[i].x-10 && y>molo_points[i].y-10 && y<molo_points[i].y+10)
+    {
+      point=true
+    }
+  }
+  for(i=0; i<combo_points.length; i++){
+    if(x<combo_points[i].x+10 && x>combo_points[i].x-10 && y>combo_points[i].y-10 && y<combo_points[i].y+10)
+    {
+      point=true
+    }
+  }
+  if(point)
+  {
+    canvas.style.cursor = "pointer";
+  }
+  else {
+    canvas.style.cursor = "default";
+  }
+}
+
+function video_on(src) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("video_div").style.display = "block";
+
+  var video = document.getElementById('video_player');
+  var source = document.createElement('source');
+
+  source.setAttribute('src', 'videos/inferno/'+src + '.mp4');
+  source.id="source"
+
+  video.appendChild(source);
+}
+
+function Draw(){
+
+    var img = new Image();
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0);
+      for (i = 0; i < smoke_points.length; i++) {
+        ctx.beginPath();
+        ctx.arc(smoke_points[i].x,smoke_points[i].y,10,0,2*Math.PI);
+        ctx.fillStyle = "#2cbff5"; //blue
+        ctx.fill();
+      }
+      for (i = 0; i < molo_points.length; i++) {
+        ctx.beginPath();
+        ctx.arc(molo_points[i].x,molo_points[i].y,10,0,2*Math.PI);
+        ctx.fillStyle = "#f58142"; //red
+        ctx.fill();
+      }
+      for (i = 0; i < combo_points.length; i++) {
+        ctx.beginPath();
+        ctx.arc(combo_points[i].x,combo_points[i].y,10,0,2*Math.PI);
+        ctx.fillStyle = "#a23dd4"; //purple
+        ctx.fill();
+      }
+    };
+    img.src = 'img/inferno_radar.png';
+    canvas.addEventListener("mousemove", mouse, false);
+    canvas.addEventListener("click", click, false);
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("source").remove();
+  var video = document.getElementById('video_player');
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+}
+
+Draw()
+
+</script>
+</body>
+</html>
